@@ -19,10 +19,17 @@ namespace FirstEFCoreApplication.Models {
 
         // Foreign Keys
         
-        // OneToOne
+        // OneToOne (1 Zimmer pro Bewohner)
         public Room Room { get; set; }
 
-        // ManyToMany
+        // ManyToMany (viele Bewohner, viele Pfleger)
         public IList<ResidentCareTaker> ResidentCareTakers { get; set; }
+
+        // ManyToOne-Beziehung (viele Besucher, ein Bewohner)
+        public IList<Visitor> Visitors { get; set; }
+
+        public override string  ToString() {
+            return Prename + " " + LastName + ",\nAge: " + Age + ",\nCareLevel: " + CareLevel;
+        }
     }
 }
