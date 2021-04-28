@@ -45,7 +45,6 @@ namespace FirstEFCoreApplication.Services {
                 visitorList = context.Visitors.Where(e => e.ResidentId == residentId).ToList();
 
             }
-
             return visitorList;
         }
 
