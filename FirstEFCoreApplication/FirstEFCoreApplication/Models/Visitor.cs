@@ -10,5 +10,8 @@ namespace FirstEFCoreApplication.Models {
         public int VisitorId { get; set; }
         public string PreName { get; set; }
         public string LastName { get; set; }
+
+        public int ResidentId { get; set; }
+        public Resident Resident { get; set; }
     }
 }
