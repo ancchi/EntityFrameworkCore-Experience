@@ -29,6 +29,7 @@ namespace FirstEFCoreApplication {
 
         public DbSet<CareTaker> CareTakers { get; set; }
         public DbSet<Resident> Residents { get; set; }
+        public DbSet<ResidentCareTaker> ResidentCareTakers { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Visitor> Visitors { get; set; }
     }

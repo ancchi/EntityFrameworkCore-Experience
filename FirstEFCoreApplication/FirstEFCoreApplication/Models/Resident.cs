@@ -28,8 +28,8 @@ namespace FirstEFCoreApplication.Models {
         // ManyToOne-Beziehung (viele Besucher, ein Bewohner)
         public IList<Visitor> Visitors { get; set; }
 
-        public override string  ToString() {
+        /*public override string  ToString() {
             return Prename + " " + LastName + ",\nAge: " + Age + ",\nCareLevel: " + CareLevel;
-        }
+        }*/
     }
 }

@@ -73,7 +73,7 @@ namespace FirstEFCoreApplication.Migrations
 
                     b.HasIndex("ResidentId");
 
-                    b.ToTable("ResidentCareTaker");
+                    b.ToTable("ResidentCareTakers");
                 });
 
             modelBuilder.Entity("FirstEFCoreApplication.Models.Room", b =>
