@@ -8,6 +8,7 @@ namespace FirstEFCoreWithDependencyInjection.Services {
         List<Resident> FilterResidentsByCareLevel(string careLevel);
 
         List<Resident> FilterResidentByRoomEquipment(string equipment);
+        int CountNumberOfEquipmentCategories();
 
         List<Resident> FilterResidentsByAge(int minAge, int maxAge);
     }

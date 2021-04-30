@@ -1,12 +1,6 @@
 ﻿using Autofac;
-using FirstEFCoreWithDependencyInjection.Services;
-using System;
-using System.Collections.Generic;
-
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FirstEFCoreWithDependencyInjection {
     public static class ContainerConfig {
@@ -21,7 +15,11 @@ namespace FirstEFCoreWithDependencyInjection {
 
             builder.RegisterType<QueryService>().As<IQueryService>();*/
 
-            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
+
+            // automatisch die Types/Klassen und Interfaces ermitteln
+
+            //builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly()) // automatisch ausführende Assembly ermitteln
+            builder.RegisterAssemblyTypes(Assembly.Load(nameof(FirstEFCoreWithDependencyInjection))) // spezifische Assembly
                 .Where(t => t.Namespace.Contains("Services"))
                 .As(t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
 
